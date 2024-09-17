@@ -1,5 +1,6 @@
 package org.fullstack.foodie;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -32,10 +33,10 @@ public class AppTest {
 		userWrapper.setFirstName("ratna");
 		userWrapper.setLastName("kondet");
 		userWrapper.setEmailId("rkondeti@eiu.edu");
-		userWrapper.setPhoneNumber("2177905527");
-		userWrapper.setPassword("Ratna@552");
+		userWrapper.setPhoneNumber("2167755270");
+		userWrapper.setPassword("Ratna1234@");
 		String result = recipiesRest.register(userWrapper);
-	    assertTrue(true, result.concat("ratna"));
+	    assertEquals(true, result.contains("ratna"));
 
 	}
 
