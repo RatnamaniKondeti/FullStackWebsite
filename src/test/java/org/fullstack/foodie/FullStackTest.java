@@ -1,24 +1,22 @@
 package org.fullstack.foodie;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.fullstack.foodie.model.UserWrapper;
-import org.fullstack.foodie.service.impl.RecipiesServiceImpl;
+import org.fullstack.foodie.rest.RecipiesRest;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class AppTest {
-
+class FullStackTest {
 	@Autowired
-	private static RecipiesServiceImpl recipiesRest;
-
-	private static final Logger log = LoggerFactory.getLogger(AppTest.class);
+	private static RecipiesRest recipiesRest;
 
 	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+	@Test
 	public void TestRegisterAPI() {
-		log.info("inside Test");
 		System.out.println("Entered TestRegisterAPI");
 		UserWrapper userWrapper = new UserWrapper();
 		userWrapper.setFirstName("ratna");
@@ -27,8 +25,8 @@ public class AppTest {
 		userWrapper.setPhoneNumber("2167755270");
 		userWrapper.setPassword("Ratna1234@");
 		String result = recipiesRest.register(userWrapper);
-		
-		assertNotNull(result.contains("ratna"));
+	    assertEquals(true, result.contains("ratna"));
+
 	}
 
 }

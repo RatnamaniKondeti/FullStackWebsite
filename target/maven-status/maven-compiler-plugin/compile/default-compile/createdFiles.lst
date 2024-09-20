@@ -1,0 +1,9 @@
+org\fullstack\foodie\daoI\RecipiesDao.class
+org\fullstack\foodie\model\UserWrapper.class
+org\fullstack\foodie\service\impl\RecipiesServiceImpl.class
+org\fullstack\foodie\exceptionhandler\BusinessException.class
+org\fullstack\foodie\rest\RecipiesRest.class
+org\fullstack\foodie\dao\impl\RecipiesDaoImpl.class
+org\fullstack\foodie\serviceI\RecipiesService.class
+org\fullstack\foodie\rest\impl\RecipiesRestImpl.class
+org\fullstack\foodie\model\User.class

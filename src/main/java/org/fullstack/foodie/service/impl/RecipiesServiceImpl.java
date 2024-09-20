@@ -7,6 +7,8 @@ import org.fullstack.foodie.exceptionhandler.BusinessException;
 import org.fullstack.foodie.model.User;
 import org.fullstack.foodie.model.UserWrapper;
 import org.fullstack.foodie.serviceI.RecipiesService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +17,12 @@ public class RecipiesServiceImpl implements RecipiesService {
 
 	@Autowired
 	private RecipiesDao recipiesDao;
+	
+	private static Logger log=LoggerFactory.getLogger(RecipiesServiceImpl.class);
 
 	@Override
 	public String register(UserWrapper userWrapper) {
+		log.info("Inside Log Folder");
 
 		User user = new User();
 		user.setFirstName(userWrapper.getFirstName());
