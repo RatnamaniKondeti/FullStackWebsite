@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.fullstack.foodie.AppTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.139 s <<< FAILURE! - in org.fullstack.foodie.AppTest
-org.fullstack.foodie.AppTest.TestRegisterAPI  Time elapsed: 0.029 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "org.fullstack.foodie.service.impl.RecipiesServiceImpl.register(org.fullstack.foodie.model.UserWrapper)" because "org.fullstack.foodie.AppTest.recipiesRest" is null
-	at org.fullstack.foodie.AppTest.TestRegisterAPI(AppTest.java:29)
-
