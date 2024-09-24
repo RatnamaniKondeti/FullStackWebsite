@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>World Recipes</title>
+    <style>
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .recipe-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .recipe-title {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .recipe-description {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+    </head>
+
+<body>
+   <header>
+        <h1>Foodie</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Recipies.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Recipes/Brinjal.html"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="recipes">
+        <!-- Recipe Cards -->
+        <div class="recipe-card">
+            <img src="Images/Biryani.jpg" alt="Biryani" class="recipe-image">
+            <h2 class="recipe-title">Biryani</h2>
+        </div>
+
+        <div class="recipe-card">
+            <img src="Images/Mango.jpg" alt="Mango rice" class="recipe-image">
+            <h2 class="recipe-title">Mango Rice</h2>
+        </div>
+
+        <div class="recipe-card">
+            <img src="Images/Cheeseburher.jpg" alt="Recipe 3" class="recipe-image">
+            <h2 class="recipe-title">Cheeseburger</h2>
+        </div>
+
+        <div class="recipe-card">
+            <img src="Images/Homemade-Ground-Beef-Lasagna.png" alt="Recipe 4" class="recipe-image">
+            <h2 class="recipe-title">Homemade-Ground-Beef-Lasagna</h2>
+        </div>
+
+        <div class="recipe-card">
+            <img src="Images/Pasta.jpg" alt="Recipe 5" class="recipe-image">
+            <h2 class="recipe-title">Pasta</h2>
+        </div>
+
+        <div class="recipe-card">
+            <img src="Images/Traditional_cuisine.jpg" alt="Recipe 6" class="recipe-image">
+            <h2 class="recipe-title">The Traditional Cuisine of Mexico</h2>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Recipe Collection. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
