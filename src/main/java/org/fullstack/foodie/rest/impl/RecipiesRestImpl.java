@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class RecipiesRestImpl implements RecipiesRest {
 
 	@Autowired
-	private static RecipiesService recipieService;
+	private  RecipiesService recipieService;
 
 	private static final Logger log = LoggerFactory.getLogger(RecipiesRestImpl.class);
 

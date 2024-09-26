@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.fullstack.foodie.exceptionhandler.BusinessException;
 import org.fullstack.foodie.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RecipiesDao {
+public interface RecipiesDao  extends JpaRepository<User, Integer>{
 
 	public boolean register(User user) throws BusinessException;
 

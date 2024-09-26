@@ -10,15 +10,15 @@ import org.fullstack.foodie.serviceI.RecipiesService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class RecipiesServiceImpl implements RecipiesService {
 
 	@Autowired
 	private RecipiesDao recipiesDao;
-	
-	private static Logger log=LoggerFactory.getLogger(RecipiesServiceImpl.class);
+
+	private static Logger log = LoggerFactory.getLogger(RecipiesServiceImpl.class);
 
 	@Override
 	public String register(UserWrapper userWrapper) {
@@ -37,27 +37,27 @@ public class RecipiesServiceImpl implements RecipiesService {
 			System.out.println(ex.getLocalizedMessage());
 			ex.printStackTrace();
 			return "Unexpected Exception Occured";
-			}
+		}
 	}
 
 	@Override
 	public UserWrapper getUserDetails(int userId) {
-		System.out.println("Inside Method getUserDetails with UserId:"+userId);
-		try{
-			User user= recipiesDao.getUserDetails(userId);
-		UserWrapper userWrapper=new UserWrapper();
-		userWrapper.setFirstName(user.getFirstName());
-		userWrapper.setLastName(user.getLastName());
-		userWrapper.setEmailId(user.getEmailId());
-		userWrapper.setPhoneNumber(user.getPhoneNumber());
-		userWrapper.setPassword(user.getPassword());
-		return userWrapper;
-		}catch (BusinessException ex) {
+		System.out.println("Inside Method getUserDetails with UserId:" + userId);
+		try {
+			User user = recipiesDao.getUserDetails(userId);
+			UserWrapper userWrapper = new UserWrapper();
+			userWrapper.setFirstName(user.getFirstName());
+			userWrapper.setLastName(user.getLastName());
+			userWrapper.setEmailId(user.getEmailId());
+			userWrapper.setPhoneNumber(user.getPhoneNumber());
+			userWrapper.setPassword(user.getPassword());
+			return userWrapper;
+		} catch (BusinessException ex) {
 			System.out.println(ex.getLocalizedMessage());
 			ex.printStackTrace();
 			return null;
-			
-			}
+
+		}
 	}
 
 	@Override
